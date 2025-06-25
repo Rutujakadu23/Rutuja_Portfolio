@@ -1,3 +1,2 @@
-
-// Optional JavaScript functionality can go here
-console.log("Welcome to Rutuja's portfolio!");
+// Optional: Add animations or interactivity here in future
+console.log("Portfolio loaded!");
