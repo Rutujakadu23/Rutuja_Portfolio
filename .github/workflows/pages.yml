@@ -30,7 +30,7 @@ jobs:
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # Ensure index.html and other assets are here
+          path: ./index # Ensure index.html and other assets are here
 
       - name: Deploy to GitHub Pages
         id: deployment
