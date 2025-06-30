@@ -67,3 +67,49 @@ document.addEventListener("DOMContentLoaded", () => {
     animate();
   }
 });
+
+  function updateDateTime() {
+    const now = new Date();
+    
+    const optionsDate = { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' };
+    const optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+
+    const dateStr = now.toLocaleDateString('en-IN', optionsDate);
+    const timeStr = now.toLocaleTimeString('en-IN', optionsTime);
+
+    document.getElementById('live-date').textContent = `📅 ${dateStr}`;
+    document.getElementById('live-time').textContent = `⏰ ${timeStr}`;
+  }
+  
+document.addEventListener("DOMContentLoaded", () => {
+  // Load Lottie animation
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+path: 'asset/animation4.json'
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  lottie.loadAnimation({
+    container: document.getElementById("footer-lottie"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: 'asset/Animations2.json' // ✅ relative path to your file
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  lottie.loadAnimation({
+    container: document.getElementById("about-lottie"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: 'asset/AnimationAbout.json' // ✅ relative path to your file
+  });
+});
